@@ -1,0 +1,43 @@
+@use "../base/abstracts" as *;
+
+.toggler {
+  &__switch {
+    -webkit-appearance: none;
+    background-color: $light-grayish-blue2;
+    border-radius: 1.5rem;
+    width: 2.625rem;
+    height: 1.375rem;
+    position: relative;
+    margin: 0.5rem;
+    transition: 0.3s ease-in-out;
+    @include mq(medium) {
+      margin-inline: 1rem;
+    }
+
+    &:hover {
+      background-color: $soft-cyan;
+    }
+
+    &:checked {
+      background-color: $dark-desaturated-blue;
+
+      &::after {
+        left: 70%;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.875rem;
+      width: 0.875rem;
+      border-radius: 50%;
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      transition: left 0.3s;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../base/abstracts" as *;
+
+.features {
+  padding: 0 0 1.9rem 0;
+
+  @include mq(medium) {
+    padding: 0 1.2rem 0 0;
+  }
+
+  &__item {
+    @include flex(center, baseline);
+    padding-top: 0.6rem;
+
+    @include mq(medium) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__check {
+    margin-right: 1rem;
+  }
+}

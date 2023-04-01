@@ -1,0 +1,45 @@
+@use "../base/abstracts" as *;
+
+body {
+  background-color: $very-pale-blue;
+  font-family: $font-family;
+  font-size: $font-size;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  @include bg-img("../assets/images/bg-pattern.svg", 0% -20%);
+  @include mq(medium) {
+    background-position: 0% 0%;
+  }
+}
+
+h1 {
+  font-size: 1.25rem;
+  @include mq(medium) {
+    font-size: 1.76rem;
+  }
+}
+
+p {
+  color: $grayish-blue;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  color: $pale-blue;
+  font-weight: $fw-800;
+  background-color: $dark-desaturated-blue;
+  border-radius: 1.5625rem;
+  border: none;
+  padding: 0.7rem 3rem;
+  transition: color 0.5s ease-in-out;
+
+  &:hover {
+    color: $white;
+  }
+}

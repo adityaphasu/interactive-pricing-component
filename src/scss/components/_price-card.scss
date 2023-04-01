@@ -1,0 +1,87 @@
+@use "../base/abstracts" as *;
+
+.price-card {
+  font-size: 0.75rem;
+  background-color: $white;
+  border-radius: 0.5rem;
+  padding: 2rem 0rem 1rem;
+  box-shadow: 0 0 1.75rem 0 hsl(227deg 41.9% 29.04% / 15%);
+
+  @include mq(medium) {
+    width: 33.5rem;
+    padding: 1rem;
+
+    &__slider {
+      @include grid-col-2;
+      padding: 1rem;
+    }
+  }
+
+  &__views {
+    text-transform: uppercase;
+    letter-spacing: 0.0938rem;
+    @include mq(medium) {
+      font-size: 1rem;
+      @include justify-padding(0.5rem);
+    }
+  }
+
+  &__rate {
+    font-size: 0.875rem;
+    @include flex(center, center);
+
+    @include mq(medium) {
+      @include justify-padding(1.4rem);
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  &__span {
+    font-size: 1.99rem;
+    color: $dark-desaturated-blue;
+    font-weight: $fw-800;
+    padding-right: 0.5rem;
+    @include mq(medium) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__toggler {
+    padding: 2rem 1rem 2rem 2rem;
+    @include flex(center, center);
+
+    @include mq(medium) {
+      justify-content: flex-end;
+      padding: 1.5rem 2.5rem 2rem 2rem;
+    }
+  }
+
+  &__value {
+    font-size: 0.625rem;
+    font-weight: $fw-800;
+    color: $light-red;
+    background-color: $light-grayish-red;
+    margin-left: 0.625rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+  }
+
+  &__discount {
+    display: none;
+    @include mq(medium) {
+      display: inline-block;
+    }
+  }
+
+  &__features {
+    border-top: 0.0625rem solid $light-grayish-blue2;
+    padding-block: 1rem;
+
+    @include mq(medium) {
+      @include grid-col-2;
+      justify-items: center;
+      gap: 3.5rem;
+    }
+  }
+}
