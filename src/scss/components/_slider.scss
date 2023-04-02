@@ -23,6 +23,12 @@
       background: $strong-cyan url("/src/assets/images/icon-slider.svg") no-repeat center;
       box-shadow: 0 0.5rem 2rem $strong-cyan;
       cursor: pointer;
+      transition: 500ms ease-in-out;
+
+      &:active,
+      &:hover {
+        background-color: darken($strong-cyan, 10%);
+      }
     }
   }
 }
