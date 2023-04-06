@@ -8,6 +8,7 @@ function Toggler(props) {
           type="checkbox"
           className="toggler__switch"
           name="toogler"
+          id="toggler"
           checked={props.checked}
           onChange={props.onChange}
         />
