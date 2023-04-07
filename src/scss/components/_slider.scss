@@ -15,7 +15,21 @@
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
 
-    &::-webkit-slider-thumb,
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border-radius: 50%;
+      height: 2.5rem;
+      width: 2.5rem;
+      background: $strong-cyan url("/src/assets/images/icon-slider.svg") no-repeat center;
+      box-shadow: 0 0.5rem 2rem $strong-cyan;
+      cursor: pointer;
+      transition: 500ms ease-in-out;
+
+      &:active,
+      &:hover {
+        background-color: darken($strong-cyan, 10%);
+      }
+    }
     &::-moz-range-thumb {
       -webkit-appearance: none;
       border-radius: 50%;
